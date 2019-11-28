@@ -1,3 +1,4 @@
 interface Window {
-  webkitAudioContext: any
+  webkitAudioContext: any,
+  neo: Neo
 }
