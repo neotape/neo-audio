@@ -1,13 +1,28 @@
 import {checkAccessibility} from 'helpers';
 
-class Neo {
+interface NeoInstanceProps {
+  // TODO
+}
+
+class NeoContext<NeoInstanceProps> {
   supported: boolean;
-  AudioContext: AudioContext;
+  audioContext: AudioContext;
   context: Promise<AudioContext>;
 
-  constructor() {
+  constructor(neoInstanceProps: NeoInstanceProps) {
+    //  TODO 完成props
+  }
 
+  async initialize() {
+    const {reason, accessible} = await checkAccessibility(); // 检查可用性
+    if (accessible && !reason) {
+      !this.audioContext && (this.audioContext = new AudioContext()); // 不存在才初始化
+      this.context = Promise.resolve(this.audioContext);
+      return this.audioContext;
+    } else {
+      return Promise.reject(false);
+    }
   }
 }
 
-export default Neo;
+export default new NeoContext({});

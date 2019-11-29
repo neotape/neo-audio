@@ -5,7 +5,7 @@
 export default function (): Promise<{ accessible: boolean, reason?: any }> {
   return new Promise((resolve, reject) => {
     try {
-      window.AudioContext = window.AudioContext || window.webkitAudioContext || null;
+      window.AudioContext = window.AudioContext || window.webkitAudioContext || null; // webkit setting here
       if (window.AudioContext) {
         // web audio API supported
         resolve({

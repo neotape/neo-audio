@@ -1,4 +1,4 @@
-import Neo from 'neo';
+import NeoContext from 'neo-context';
 
 interface OscillatorParams {
   type: string // type of sound wave
@@ -11,10 +11,12 @@ interface OscillatorParams {
 
 class Oscillator<OscillatorParams> {
 
+  context: Promise<AudioContext | boolean> = NeoContext.initialize();
   oscillator = '';
   type = '';
-  frequency: '';
+  frequency = '';
 
   constructor(oscillatorParams: OscillatorParams) {
+
   }
 }

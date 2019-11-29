@@ -9,8 +9,9 @@
     "baseUrl": "./",
     "paths": {
       "helpers":["src/helpers/index.ts"],
-      "neo":["src/modules/index.ts"]
+      "neo-context":["src/modules/index.ts"]
     },
+    "skipLibCheck": true,
     "outDir": "dist/",
     "lib": [
       "dom",
@@ -21,5 +22,8 @@
   "include": [
     "./src/**/*",
     "./types"
+  ],
+  "exclude": [
+
   ]
 }

@@ -18,7 +18,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       helpers: path.resolve(__dirname, 'src/helpers/index.ts'),
-      neo: path.resolve(__dirname, 'src/modules/index.ts')
+      "neo-context": path.resolve(__dirname, 'src/modules/index.ts')
     }
   },
   plugins: [
