@@ -3,8 +3,9 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "module": "es6",
-    "target": "es5",
     "allowJs": true,
+    "target": "esnext",
+    "noEmit": true,
     "baseUrl": "./",
     "paths": {
       "helpers":["src/helpers/index.ts"],
