@@ -7,9 +7,15 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "helpers":["src/helpers/index.ts"]
+      "helpers":["src/helpers/index.ts"],
+      "neo":["src/modules/index.ts"]
     },
-    "outDir": "dist/"
+    "outDir": "dist/",
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost"
+    ]
   },
   "include": [
     "./src/**/*",

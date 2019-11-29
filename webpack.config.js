@@ -17,7 +17,8 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      helpers: path.resolve(__dirname, 'src/helpers')
+      helpers: path.resolve(__dirname, 'src/helpers/index.ts'),
+      neo: path.resolve(__dirname, 'src/modules/index.ts')
     }
   },
   plugins: [
